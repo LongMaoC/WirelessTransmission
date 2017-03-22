@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title></title>
+  <meta http-equiv=”Content-Type” content=”text/html;charset=utf-8″>
+  <script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="layer/2.4/layer.js"></script>
+  <script>
+
+    function btn_up_file_name(){
+        if($('#text').val() == ""){
+            layer.msg("请填写文件名!");
+          return ;
+        }
+        if( $('#path').html() == ""){
+            layer.msg("异常取值错误!");
+            return ;
+        }
+
+          $.ajax({
+              type: 'POST',
+              url: "up_file_name",
+              dataType: 'json',
+              async: true,
+              data: {'path': $('#path').html(),'fileName':$('#text').val()},
+              success: function (data) {
+                    if(data.flag == "1"){
+                        layer.msg(data.msg);
+                        var index = parent.layer.getFrameIndex(window.name);
+                        parent.layer.close(index);
+                    }  else {
+                        layer.msg(data.msg);
+                    }
+              }
+          });
+    }
+    function getParentCreateDirPath(){
+      $('#path').html($("#span_path",window.parent.document).html());
+    }
+  </script>
+</head>
+<body onload="getParentCreateDirPath()">
+
+  <div id="main">
+      您将在<br><span id="path"></span><br>创建文件夹<br>
+      文件名:<input type="text" id="text"><input type="button" onclick="btn_up_file_name()" value="创建">
+  </div>
+</body>
+</html>
