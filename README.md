@@ -22,8 +22,6 @@
  * http://fex.baidu.com/webuploader/
 
 ## -END-
-  要是有其他常用的注解，可以告诉我！
+
   * 邮件(chenxingyu1112@gmail.com)
   * QQ: 1209101049
-
-```
