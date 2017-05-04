@@ -1,8 +1,8 @@
 #WirelessTransmission
 
-![image](https://github.com/LongMaoC/WirelessTransmission/tree/master/apk/img1.jpeg)
+![image](https://github.com/LongMaoC/WirelessTransmission/blob/master/apk/img1.jpeg)
 
-![image](https://github.com/LongMaoC/WirelessTransmission/tree/master/apk/img3.png)
+![image](https://github.com/LongMaoC/WirelessTransmission/blob/master/apk/img3.png)
 
 ## 描述
 通过浏览器对手机文件夹进行管理
