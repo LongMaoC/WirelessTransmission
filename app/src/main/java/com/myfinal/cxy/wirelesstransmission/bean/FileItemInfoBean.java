@@ -5,7 +5,6 @@ import java.util.List;
 /**
  * Created by cxy on 17-3-21.
  */
-
 public class FileItemInfoBean {
     private List<FileItemInfo> list;
     private int isDir;//1是0否

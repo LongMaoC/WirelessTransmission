@@ -60,6 +60,8 @@ public abstract class NanoHTTPD {
     public static final String MIME_PLAINTEXT = "text/plain";
     public static final String MIME_HTML = "text/html";
     public static final String MIME_DEFAULT_BINARY = "application/octet-stream";
+    public static final String MIME_JSON = "application/json";
+
     private final String hostname;
     private final int myPort;
     private ServerSocket myServerSocket;
@@ -80,6 +82,11 @@ public abstract class NanoHTTPD {
         this.tempFileManagerFactory = new DefaultTempFileManagerFactory();
         this.asyncRunner = new DefaultAsyncRunner();
     }
+    private boolean isRun = false ;
+
+    public boolean isRun() {
+        return isRun;
+    }
 
     /**
      * Starts the server
@@ -88,6 +95,7 @@ public abstract class NanoHTTPD {
      */
     public void start() throws IOException {
         Log.i("NanoHTTPD", "server start");
+        isRun = true;
         myServerSocket = new ServerSocket();
         myServerSocket.bind((hostname != null) ? new InetSocketAddress(
                 hostname, myPort) : new InetSocketAddress(myPort));
@@ -136,8 +144,8 @@ public abstract class NanoHTTPD {
     public void stop() {
         Log.i("NanoHTTPD", "server stop");
         try {
-            myServerSocket.close();
-            myThread.join();
+            if(myServerSocket!=null)myServerSocket.close();
+            if(myThread!=null)myThread.join();
         } catch (IOException ioe) {
             ioe.printStackTrace();
         } catch (InterruptedException e) {

@@ -16,24 +16,27 @@
 package com.myfinal.cxy.wirelesstransmission.utils;
 
 
-import android.content.Intent;
-import android.content.res.AssetManager;
 import android.os.Environment;
 
 import com.myfinal.cxy.wirelesstransmission.MyApplication;
 import com.myfinal.cxy.wirelesstransmission.bean.FileItemInfo;
 
-import org.json.JSONArray;
-
 import java.io.File;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 /**
  *
  */
 public class FileUtils {
+
+
+    public static String getAppUploadFile(){
+        return FileUtils.getAppStorageDirectory()+File.separator+"app-debug.apk";
+    }
+
     public static String getAppStorageDirectory(){
         String path = Environment.getExternalStorageDirectory().getPath();
         if(path==null) return "";
@@ -74,7 +77,8 @@ public class FileUtils {
         }else {
             String substring = f.getName().substring(f.getName().lastIndexOf(".") + 1);
             if(substring!=null && !substring.equals("")){
-                Integer integer = MIMEUtils.get(substring.toUpperCase());
+                L.e(substring+"\t"+substring.toUpperCase(Locale.ENGLISH));
+                Integer integer = MIMEUtils.get(substring.toUpperCase(Locale.ENGLISH));
                 return integer.intValue();
             }else{
                 return FileItemInfo.Type.unknow;
@@ -187,5 +191,14 @@ public class FileUtils {
         String path =getAppStorageDirectory();
         if(path==null) return null;
         return new File(path+File.separator+fileName);
+    }
+
+    public static boolean delFile(String path) {
+        if(path==null ||path.equals(""))return true ;
+        File file= new File(path);
+        if(file.isFile()&& file.exists()){
+                return file.delete();
+        }
+        return false;
     }
 }

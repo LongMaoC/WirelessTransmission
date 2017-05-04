@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:layout_gravity="center"
+        android:background="@drawable/shape_rounded_rectangles_bg_fff"
+        android:gravity="center"
+        android:layout_width="300dp"
+        android:orientation="vertical"
+        android:layout_height="200dp">
+        <TextView
+            android:text="如果感觉不错,给个star呗?"
+            android:layout_marginTop="20dp"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_github_path"
+            android:textSize="11sp"
+            android:layout_marginTop="20dp"
+            android:text="https://github.com/LongMaoC/WirelessTransmission"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:textSize="20sp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:id="@+id/btn_ok"
+                android:textColor="#FFF"
+                android:background="@drawable/shape_rounded_rectangles_fff"
+                android:text="给星去!"/>
+
+            <TextView
+                android:layout_width="100dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:background="@drawable/shape_rounded_rectangles_fff"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:textSize="20sp"
+                android:id="@+id/btn_no"
+                android:textColor="#FFF"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="臭不要脸"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

@@ -2,7 +2,8 @@
 <html>
 <head>
   <title>无线传输</title>
-  <meta http-equiv=”Content-Type” content=”text/html;charset=utf-8″>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
   <script type="text/javascript" src="jquery-1.7.2.min.js"></script>
   <script type="text/javascript" src="ajaxfileupload.js"></script>
   <script type="text/javascript" src="index.js"></script>
@@ -11,6 +12,8 @@
 
   <link rel="stylesheet" type="text/css" href="webuploader/0.1.5/webuploader.css" />
   <script type="text/javascript" src="webuploader/0.1.5/webuploader.min.js"></script>
+  <script type="text/javascript" src="FileSaver.js"></script>
+  <script type="text/javascript" src="Blob.js"></script>
 
 </head>
 <body onload="getAllFileOnPath('/',null,'5',true)">
@@ -18,14 +21,16 @@
 
   <div id="left" class="left">
     <div class="div_left_top" id="div_left_top" >
-      当前路径:<span id="span_path" class="span_path">/</span>
+      <div style="margin-left:5px;">
+        当前路径:<span id="span_path" class="span_path">/</span>
+      </div>
     </div>
     <div id="div_left_bottom" class="div_left_bottom" >
 
     </div>
   </div>
 
-  <div id="right" style="">
+  <div id="right" >
 
     <div >
       <fieldset>
@@ -37,64 +42,84 @@
       </fieldset>
     </div>
 
-    <div class="div_fieldset">
-      <fieldset>
-        <legend >
-          快速定位
-        </legend>
+    <div id="div_right_bottom" >
+      <div id="div_utils">
 
-        <input type="button" value="定位至微信" onclick="btn_to_file_dir('wx')"><br>
-        <input type="button" value="定位至qq" onclick="btn_to_file_dir('qq')"><br>
-        <input type="button" value="定位至本程序" onclick="btn_this_dir()"><br>
-        <input type="button" value="当前位置创建文件夹" onclick="btn_create_dir()"><br>
-        <input type="button" value="删除当前文件夹" onclick="btn_del_dir()"><br>
+        <fieldset>
+          <legend >
+            工具栏
+          </legend>
 
-      </fieldset>
-    </div>
+          <table>
+            <tr>
+              <td align="left" style="width: 50%">
+                <label><input name="utils_select" type="radio" value="" onclick="radioClick(this)" id="r_local" checked="checked"/>目录/文件</label>
+              </td>
+              <td align="left">
+                <label><input name="utils_select" type="radio" value="" onclick="radioClick(this)" id="r_pushpull"/>剪切板</label>
+              </td>
+            </tr>
 
+            <tr>
+              <td align="left">
+                <label><input name="utils_select" type="radio" value="" onclick="radioClick(this)" id="r_upload"/>上传文件</label>
+              </td>
+              <td align="left">
+                <label><input name="utils_select" type="radio" value="" onclick="radioClick(this)" id="r_download"/>下载进度</label>
+              </td>
+            </tr>
 
-    <div class="div_fieldset">
-      <fieldset>
-        <legend >
-          push/pull
-        </legend>
-
-        <div style="width: 100%;height: 150px;">
-          <div style="float: left;width:100%;">
-            <textarea id="pull_push_textarea" style="width:99%;height:100px;"></textarea>
-          </div>
-          <div style="float: right">
-            <input type="button" value="拉取剪切板内容" onclick="pull()">
-            <input type="button" value="推送至剪切板" onclick="push()">
-          </div>
-        </div>
-      </fieldset>
-    </div>
+          </table>
+        </fieldset>
 
 
+        <div class="div_fieldset" id="div_location_id">
 
-    <div class="div_fieldset">
-      <fieldset>
-        <legend >
-          上传
-        </legend>
+          <a href="javascript:void(0)" onclick="btn_to_file_dir('wx')" class="blueUtilsBtn">定位至微信</a><br>
+          <a href="javascript:void(0)" onclick="btn_to_file_dir('qq')" class="blueUtilsBtn">定位至qq</a><br>
+          <a href="javascript:void(0)" onclick="btn_this_dir()" class="blueUtilsBtn">定位至本程序</a><br>
+          <a href="javascript:void(0)" onclick="btn_create_dir()" class="blueUtilsBtn">创建文件夹</a><br>
+          <a href="javascript:void(0)" onclick="btn_del_dir()" class="blueUtilsBtn">删除文件夹</a>
 
-        <div id="uploader" class="wu-example">
-          <!--用来存放文件信息-->
-          <div id="thelist" class="uploader-list"></div>
-          <div class="btns">
-            <div id="picker">选择文件</div>
-            <button id="ctlBtn" class="btn btn-default">开始上传</button>
-          </div>
         </div>
 
+        <div class="div_fieldset" id="div_push_pull" style="display:none">
+          <div style="width: 100%;height: 150px;">
+            <div style="width:100%;">
+              <textarea id="pull_push_textarea" style="width:99%;height:100px;"></textarea>
+            </div>
+            <div >
+              <a href="javascript:void(0)" onclick="pull()" class="blueUtilsBtn" style="margin-top:5px;">拉取剪切板内容</a>
+              <a href="javascript:void(0)" onclick="push()" class="blueUtilsBtn" style="margin-top:5px;">推送至剪切板</a>
+            </div>
+          </div>
+        </div>
 
-      </fieldset>
-    </div>
+        <div  id="div_download" style="display:none">
+
+        </div>
+
+        <div id="div_upload" style="visibility: hidden">
+
+          <div id="uploader" class="wu-example">
+            <!--用来存放文件信息-->
+            <div id="thelist" class="uploader-list"></div>
+            <div class="btns" style="margin-top:5px;">
+              <div id="picker" style="float:left">选择文件</div>
+              <!--<input type="button" id="ctlBtn" value="开始上传" style="background-color:#3BB4F2">-->
+              <a id="ctlBtn" class="blueBtn">开始上传</a>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
 
     </div>
 
   </div>
+
+</div>
 
 </div>
 

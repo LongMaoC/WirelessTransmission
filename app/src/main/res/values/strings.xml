@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">无线传输</string>
+    <string name="start_server_error">开启服务失败！</string>
+    <string name="stop_server_msg">已关闭连接</string>
+    <string name="connection_wifi">请连接wifi</string>
+    <string name="stop_server_btn_text">关闭</string>
+    <string name="start_server_btn_text">启动</string>
+    <string name="main_ps">注:手机及PC需要在同一个局域网内</string>
+    <string name="url_upload">http://cxy.jlsye.com/wirelesstransmission/upload.json</string>
+    <string name="url_download_apk">http://cxy.jlsye.com/wirelesstransmission/app-debug.apk</string>
 </resources>
