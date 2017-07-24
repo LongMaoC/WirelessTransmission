@@ -161,7 +161,15 @@ public class WebServer extends NanoHTTPD {
                         e.printStackTrace();
                     }
                 } else if (Conf.uri_pull_w2a_get.equals(uri)) {//拉取内容
-                    return new Response(Response.Status.OK, "text/html", str);
+                    Map<String,String> map = new HashMap<>();
+                    if(str.equals("")){
+                        map.put("flag","2");
+                        map.put("msg","手机剪贴板无内容!");
+                    }else {
+                        map.put("flag","1");
+                        map.put("msg",str);
+                    }
+                    return new Response(Response.Status.OK, "application/json", gson.toJson(map));
                 } else if (Conf.uri_push_w2a.equals(uri)) {//推送内容
                     try {
                         if (parameters != null && parameters.size() > 0) {

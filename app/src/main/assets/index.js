@@ -240,12 +240,18 @@ function pull() {
             $.ajax({
                 type: 'POST',
                 url: "myfinal_pull_text_function_w2a_get",
-                dataType: 'text',
+                dataType: 'json',
                 timeout: 10000,
                 async: true,
                 success: function (data) {
                     layer.close(layer_index);
-                    $('#pull_push_textarea').val(data);
+                    if(data.flag == "1"){
+                        $('#pull_push_textarea').val(data.msg);
+                    }else {
+                             layer.msg(data.msg);
+                    }
+
+
                 }
             });
         }

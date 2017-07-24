@@ -14,7 +14,7 @@ public class ClipboardUtils {
     private static ClipboardUtils instance;
     private static  ClipboardManager cm;
     private ClipboardUtils(Context context) {
-         cm = (ClipboardManager)context.getSystemService(Context.CLIPBOARD_SERVICE);
+         cm = (ClipboardManager)context.getApplicationContext().getSystemService(Context.CLIPBOARD_SERVICE);
 
     }
     public static ClipboardUtils getInstance(Context context) {
@@ -24,10 +24,14 @@ public class ClipboardUtils {
         return instance;
     }
     public String getClipboardContent(){
-        ClipData.Item itemAt = cm.getPrimaryClip().getItemAt(0);
-        if(itemAt==null)return "" ;
-        String s = itemAt.getText().toString();
-        return s ;
+        if(cm.getPrimaryClip()!=null){
+            ClipData.Item itemAt = cm.getPrimaryClip().getItemAt(0);
+            if(itemAt==null)return "" ;
+            String s = itemAt.getText().toString();
+            return s ;
+        }else {
+            return "";
+        }
     }
 
     public void  setClipboardContent(String content){

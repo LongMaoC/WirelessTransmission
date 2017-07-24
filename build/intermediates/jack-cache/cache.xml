@@ -5,85 +5,73 @@
         jar="/home/cxy/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.5/686c608d1805b6d4d425ec4459e88164ffc85870/gson-2.5.jar"
         revision="25.0.2"
         sha1="686c608d1805b6d4d425ec4459e88164ffc85870">
-        <dex dex="/media/cxy/work_space/GitHubProject/Wirelesstransmission/app/build/intermediates/transforms/preJackPackagedLibraries/release/jars/8000/1f/gson-2.5-84e9b2114e26d0fa0d6b42277f2d4ce84c937eb2.jar" />
+        <dex dex="/media/cxy/work_space/GitHubProject/Wirelesstransmission/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/gson-2.5-84e9b2114e26d0fa0d6b42277f2d4ce84c937eb2.jar" />
     </item>
     <item
         jar="/media/cxy/work_space/GitHubProject/Wirelesstransmission/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.1.0/jars/classes.jar"
         revision="25.0.2"
         sha1="ca3c7aa31e2726a400a6e552b93cb9f63c9a1e6d">
-        <dex dex="/media/cxy/work_space/GitHubProject/Wirelesstransmission/app/build/intermediates/transforms/preJackPackagedLibraries/release/jars/8000/1f/classes-abb48b9c1c6abad75b11db5afd0c86515930e31a.jar" />
+        <dex dex="/media/cxy/work_space/GitHubProject/Wirelesstransmission/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-abb48b9c1c6abad75b11db5afd0c86515930e31a.jar" />
     </item>
     <item
         jar="/media/cxy/work_space/GitHubProject/Wirelesstransmission/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.1.0/jars/classes.jar"
         revision="25.0.2"
         sha1="f02263e35e52668dd17b73bf961437e3d562b35f">
-        <dex dex="/media/cxy/work_space/GitHubProject/Wirelesstransmission/app/build/intermediates/transforms/preJackPackagedLibraries/release/jars/8000/1f/classes-29e8b259e07b609e762f030c7fdec21d8b0b50d5.jar" />
+        <dex dex="/media/cxy/work_space/GitHubProject/Wirelesstransmission/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-29e8b259e07b609e762f030c7fdec21d8b0b50d5.jar" />
     </item>
     <item
         jar="/media/cxy/work_space/GitHubProject/Wirelesstransmission/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.1.0/jars/classes.jar"
         revision="25.0.2"
         sha1="aee64634871d88a419d59eb743c1258a60f19700">
-        <dex dex="/media/cxy/work_space/GitHubProject/Wirelesstransmission/app/build/intermediates/transforms/preJackPackagedLibraries/release/jars/8000/1f/classes-b646902f3d5054f3057f227f0cbdce91c69a7a10.jar" />
-    </item>
-    <item
-        jar="/media/cxy/work_space/GitHubProject/Wirelesstransmission/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.1.0/jars/classes.jar"
-        revision="25.0.2"
-        sha1="0a0ef86b7fa568a52bf6214a0326ca1f1d618da7">
-        <dex dex="/media/cxy/work_space/GitHubProject/Wirelesstransmission/app/build/intermediates/transforms/preJackPackagedLibraries/release/jars/8000/1f/classes-4925e7a4bed6b6a5090fb4b232a9df8fecf4df45.jar" />
-    </item>
-    <item
-        jar="/home/cxy/Software/android_sdk/platforms/android-25/android.jar"
-        revision="25.0.2"
-        sha1="712a0312fe844a21a1b3812fa960c363a1578984">
-        <dex dex="/media/cxy/work_space/GitHubProject/Wirelesstransmission/app/build/intermediates/transforms/preJackRuntimeLibraries/release/jars/8000/40/android-2fa808ef243997fad891d0de00a611106174faf5.jar" />
-    </item>
-    <item
-        jar="/home/cxy/Software/android_sdk/extras/android/m2repository/com/android/support/support-annotations/25.1.0/support-annotations-25.1.0.jar"
-        revision="25.0.2"
-        sha1="64cb6b229a8bdfd907bc8dd46839a0053e4c018d">
-        <dex dex="/media/cxy/work_space/GitHubProject/Wirelesstransmission/app/build/intermediates/transforms/preJackPackagedLibraries/release/jars/8000/1f/support-annotations-25.1.0-aee171af9118656e0ef2028fbfd385ac6af6f7c4.jar" />
-    </item>
-    <item
-        jar="/media/cxy/work_space/GitHubProject/Wirelesstransmission/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/jars/classes.jar"
-        revision="25.0.2"
-        sha1="1630658fbc2d222b988603c27b4a4249586fbfe7">
-        <dex dex="/media/cxy/work_space/GitHubProject/Wirelesstransmission/app/build/intermediates/transforms/preJackPackagedLibraries/release/jars/8000/1f/classes-a874dc630d00ebc94eb42762043ea567ac493370.jar" />
-    </item>
-    <item
-        jar="/home/cxy/Software/android_sdk/platforms/android-25/optional/org.apache.http.legacy.jar"
-        revision="25.0.2"
-        sha1="5f0541a4298daa0590b22cfbde43f85e2a675545">
-        <dex dex="/media/cxy/work_space/GitHubProject/Wirelesstransmission/app/build/intermediates/transforms/preJackRuntimeLibraries/release/jars/8000/40/org.apache.http.legacy-a50447c548636fb81a48c2bdeb56d5a504c1395c.jar" />
+        <dex dex="/media/cxy/work_space/GitHubProject/Wirelesstransmission/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-b646902f3d5054f3057f227f0cbdce91c69a7a10.jar" />
     </item>
     <item
         jar="/media/cxy/work_space/GitHubProject/Wirelesstransmission/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.1.0/jars/classes.jar"
         revision="25.0.2"
         sha1="2a53c4f3518116b8c6aee0e477233f0f7da8616f">
-        <dex dex="/media/cxy/work_space/GitHubProject/Wirelesstransmission/app/build/intermediates/transforms/preJackPackagedLibraries/release/jars/8000/1f/classes-3eb7aca34c9f41574fe30698251cce8e53cb310e.jar" />
+        <dex dex="/media/cxy/work_space/GitHubProject/Wirelesstransmission/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-3eb7aca34c9f41574fe30698251cce8e53cb310e.jar" />
+    </item>
+    <item
+        jar="/home/cxy/software/androidSDK/extras/android/m2repository/com/android/support/support-annotations/25.1.0/support-annotations-25.1.0.jar"
+        revision="25.0.2"
+        sha1="64cb6b229a8bdfd907bc8dd46839a0053e4c018d">
+        <dex dex="/media/cxy/work_space/GitHubProject/Wirelesstransmission/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/support-annotations-25.1.0-61d507323aaeed75eb2dd8210e3b90e1d0b97be4.jar" />
     </item>
     <item
         jar="/media/cxy/work_space/GitHubProject/Wirelesstransmission/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.1.0/jars/classes.jar"
         revision="25.0.2"
         sha1="6fb6ac3e8d3b9013819920d9ea11f3803c4c0033">
-        <dex dex="/media/cxy/work_space/GitHubProject/Wirelesstransmission/app/build/intermediates/transforms/preJackPackagedLibraries/release/jars/8000/1f/classes-250f5b92fe8db302b1626b38532cd2e87885bbdb.jar" />
+        <dex dex="/media/cxy/work_space/GitHubProject/Wirelesstransmission/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-250f5b92fe8db302b1626b38532cd2e87885bbdb.jar" />
     </item>
     <item
         jar="/media/cxy/work_space/GitHubProject/Wirelesstransmission/app/build/intermediates/exploded-aar/com.github.yaming116/UpdateApp/1.0.2/jars/classes.jar"
         revision="25.0.2"
         sha1="c58fe4c0ec7febdd67aed5cad9aed22c0e15d18f">
-        <dex dex="/media/cxy/work_space/GitHubProject/Wirelesstransmission/app/build/intermediates/transforms/preJackPackagedLibraries/release/jars/8000/1f/classes-915c3526083061de3512f6c337b9b6b334c707dc.jar" />
+        <dex dex="/media/cxy/work_space/GitHubProject/Wirelesstransmission/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-915c3526083061de3512f6c337b9b6b334c707dc.jar" />
+    </item>
+    <item
+        jar="/media/cxy/work_space/GitHubProject/Wirelesstransmission/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.1.0/jars/classes.jar"
+        revision="25.0.2"
+        sha1="0a0ef86b7fa568a52bf6214a0326ca1f1d618da7">
+        <dex dex="/media/cxy/work_space/GitHubProject/Wirelesstransmission/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-4925e7a4bed6b6a5090fb4b232a9df8fecf4df45.jar" />
     </item>
     <item
         jar="/media/cxy/work_space/GitHubProject/Wirelesstransmission/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.1.0/jars/classes.jar"
         revision="25.0.2"
         sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="/media/cxy/work_space/GitHubProject/Wirelesstransmission/app/build/intermediates/transforms/preJackPackagedLibraries/release/jars/8000/1f/classes-84b4ba6ec3e4704c0985606cde8e00600dde20bf.jar" />
+        <dex dex="/media/cxy/work_space/GitHubProject/Wirelesstransmission/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-84b4ba6ec3e4704c0985606cde8e00600dde20bf.jar" />
+    </item>
+    <item
+        jar="/media/cxy/work_space/GitHubProject/Wirelesstransmission/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/jars/classes.jar"
+        revision="25.0.2"
+        sha1="1630658fbc2d222b988603c27b4a4249586fbfe7">
+        <dex dex="/media/cxy/work_space/GitHubProject/Wirelesstransmission/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-a874dc630d00ebc94eb42762043ea567ac493370.jar" />
     </item>
     <item
         jar="/media/cxy/work_space/GitHubProject/Wirelesstransmission/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.1.0/jars/classes.jar"
         revision="25.0.2"
         sha1="e79aa3d9a16f8c9f16377c0608de70a8f31e5d80">
-        <dex dex="/media/cxy/work_space/GitHubProject/Wirelesstransmission/app/build/intermediates/transforms/preJackPackagedLibraries/release/jars/8000/1f/classes-5c7eda5be888cc0cceb8ccb8ec1b753a73614576.jar" />
+        <dex dex="/media/cxy/work_space/GitHubProject/Wirelesstransmission/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-5c7eda5be888cc0cceb8ccb8ec1b753a73614576.jar" />
     </item>
 
 </items>
