@@ -230,7 +230,9 @@ document.getElementById('div_left_bottom').scrollLeft =document.getElementById('
 }
 
 function pull() {
+    showJumpBtn(false);
     var layer_index = layer.load();
+
     $.ajax({
         type: 'POST',
         url: "myfinal_pull_text_function_w2a",
@@ -247,8 +249,17 @@ function pull() {
                     layer.close(layer_index);
                     if(data.flag == "1"){
                         $('#pull_push_textarea').val(data.msg);
+                        $('#pull_push_textarea').focus();
+                        $('#pull_push_textarea').select();
+
+                        var url  = data.msg;
+                          if(isURL(url)){
+                          showJumpBtn(true);
+                          }else {
+                          showJumpBtn(false);
+                          }
                     }else {
-                             layer.msg(data.msg);
+                       layer.msg(data.msg);
                     }
 
 
@@ -257,6 +268,53 @@ function pull() {
         }
     });
 }
+
+function isURL (str_url) {
+    var strRegex = '^((https|http|ftp|rtsp|mms)?://)'
+        + '?(([0-9a-z_!~*\'().&=+$%-]+: )?[0-9a-z_!~*\'().&=+$%-]+@)?' //ftp的user@
+        + '(([0-9]{1,3}.){3}[0-9]{1,3}' // IP形式的URL- 199.194.52.184
+        + '|' // 允许IP和DOMAIN（域名）
+        + '([0-9a-z_!~*\'()-]+.)*' // 域名- www.
+        + '([0-9a-z][0-9a-z-]{0,61})?[0-9a-z].' // 二级域名
+        + '[a-z]{2,6})' // first level domain- .com or .museum
+        + '(:[0-9]{1,4})?' // 端口- :80
+        + '((/?)|' // a slash isn't required if there is no file name
+        + '(/[0-9a-z_!~*\'().;?:@&=+$,%#-]+)+/?)$';
+    var re=new RegExp(strRegex);
+    if (re.test(str_url)) {
+        return (true);
+    } else {
+        return (false);
+    }
+}
+
+function btnCopy()
+{
+    var Url2=document.getElementById("pull_push_textarea");
+    Url2.select(); // 选择对象
+    document.execCommand("Copy"); // 执行浏览器复制命令
+    layer.msg("ok!已复制！");
+
+}
+
+function showJumpBtn(isShow){
+    if(isShow){
+     $("#btnJumpUrl").show();
+    }else {
+     $("#btnJumpUrl").hide();
+     }
+}
+
+
+function jumpUrl(){
+     var url  = $('#pull_push_textarea').val();
+                              if(isURL(url)){
+                                  window.open(url);
+                              }else {
+                                layer.msg("无法识别，请手动复制进行跳转！");
+                              }
+}
+
 
 function push() {
     var layer_index = layer.load();

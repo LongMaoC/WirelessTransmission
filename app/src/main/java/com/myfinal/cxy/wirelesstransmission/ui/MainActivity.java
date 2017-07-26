@@ -1,9 +1,11 @@
 package com.myfinal.cxy.wirelesstransmission.ui;
 
+import android.content.ActivityNotFoundException;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.ServiceConnection;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.os.PowerManager;
@@ -23,6 +25,8 @@ import com.myfinal.cxy.wirelesstransmission.servide.WebService;
 import com.myfinal.cxy.wirelesstransmission.utils.ClipboardUtils;
 import com.myfinal.cxy.wirelesstransmission.utils.NetworkUtils;
 import com.myfinal.cxy.wirelesstransmission.utils.T;
+
+import java.io.File;
 
 
 /**
@@ -50,6 +54,9 @@ public class MainActivity extends AppCompatActivity {
         initListener();
         bindService(serviceIntent, connection, BIND_AUTO_CREATE);
         initView();
+
+
+
     }
 
     private void initView() {

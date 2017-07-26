@@ -53,19 +53,19 @@
           <table>
             <tr>
               <td align="left" style="width: 50%">
-                <label><input name="utils_select" type="radio" value="" onclick="radioClick(this)" id="r_local" checked="checked"/>目录/文件</label>
+                <input name="utils_select" type="radio" onclick="radioClick(this)" id="r_local" checked="checked"/><label for="r_local">目录/文件</label>
               </td>
               <td align="left">
-                <label><input name="utils_select" type="radio" value="" onclick="radioClick(this)" id="r_pushpull"/>剪切板</label>
+                <input name="utils_select" type="radio"  onclick="radioClick(this)" id="r_pushpull"/><label for="r_pushpull">剪切板</label>
               </td>
             </tr>
 
             <tr>
               <td align="left">
-                <label><input name="utils_select" type="radio" value="" onclick="radioClick(this)" id="r_upload"/>上传文件</label>
+                <input name="utils_select" type="radio" onclick="radioClick(this)" id="r_upload"/><label for="r_upload">上传文件</label>
               </td>
               <td align="left">
-                <label><input name="utils_select" type="radio" value="" onclick="radioClick(this)" id="r_download"/>下载进度</label>
+                <input name="utils_select" type="radio" onclick="radioClick(this)" id="r_download"/><label for="r_download">下载进度</label>
               </td>
             </tr>
 
@@ -89,8 +89,12 @@
               <textarea id="pull_push_textarea" style="width:99%;height:100px;"></textarea>
             </div>
             <div >
-              <a href="javascript:void(0)" onclick="pull()" class="blueUtilsBtn" style="margin-top:5px;">拉取剪切板内容</a>
-              <a href="javascript:void(0)" onclick="push()" class="blueUtilsBtn" style="margin-top:5px;">推送至剪切板</a>
+              <a href="javascript:void(0)" onclick="pull()" class="blueUtilsBtn" style="margin-top:5px;">拉取手机剪切板内容</a>
+              <a href="javascript:void(0)" onclick="push()" class="blueUtilsBtn" style="margin-top:5px;">推送至手机剪切板</a>
+              <hr style="padding-left:10px;padding-right:10px;">
+              <a href="javascript:void(0)" onclick="btnCopy()" class="blueUtilsBtn" style="margin-top:5px;">复制到PC剪切板</a>
+
+              <a href="javascript:void(0)" onclick="jumpUrl()" id="btnJumpUrl" class="blueUtilsBtn" style="margin-top:5px;display:none">跳转到该网址</a>
             </div>
           </div>
         </div>
