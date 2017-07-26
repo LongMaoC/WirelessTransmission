@@ -1,4 +1,4 @@
-#WirelessTransmission
+# WirelessTransmission
 
 ![image](https://github.com/LongMaoC/WirelessTransmission/blob/master/apk/img1.jpeg)
 
@@ -9,15 +9,17 @@
 
 ## 功能
 
+* 新增 跳转按钮和复制剪切板内容按钮
 * 无需数据线,通过pc管理手机文件
 * 获取手机剪贴板内容.推送文字到手机剪切板
 * 上传文件到手机
+
 
 ## 原理
 通过Nonohttpd搭建Android server ,对请求参数进行处理,并返回需要的内容.
 
 
-##第三方
+## 第三方
  * https://github.com/NanoHttpd/nanohttpd
  * http://fex.baidu.com/webuploader/
 
